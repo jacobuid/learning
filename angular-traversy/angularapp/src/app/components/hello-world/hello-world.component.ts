@@ -21,10 +21,10 @@ export class HelloWorldComponent {
 
      hasBirthday = function(){
           this.age += 1
-     }
+     };
 
      getAge = function(){
           return this.age;
-     }
+     };
 
 }

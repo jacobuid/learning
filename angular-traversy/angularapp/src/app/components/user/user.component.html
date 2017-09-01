@@ -1,0 +1,13 @@
+<section class="user">
+     <form *ngIf="edit">
+          <p><strong class="user-label">Username:</strong> {{user.userName}}</p>
+          <p><strong class="user-label">Name:</strong> {{user.firstName}} {{user.lastName}}</p>
+          <button (click)="editUser()">Edit</button>
+     </form>
+     <form *ngIf="!edit">
+          <p><strong class="user-label">Username:</strong> <input type="text" name="userName" [(ngModel)]="user.userName"></p>
+          <p><strong class="user-label">Name:</strong> <input type="text" name="firstName" [(ngModel)]="user.firstName"> <input type="text" name="lastName" [(ngModel)]="user.lastName"></p>
+          <button (click)="editUser()">Edit</button>
+     </form>
+</section>
+
