@@ -1,0 +1,38 @@
+
+<section class="messages">
+     <article class="message-group" *ngFor="let message of messages" [ngClass]="{mine: message.userId === '0'}">
+          <p class="message-user" *ngIf="message.userId !== '0' && message.showUser">{{getName(message)}}</p>
+          <div class="message" (mouseup)="mouseup(message)" (mousedown)="mousedown($event, message)" [ngClass]="{'shake': message.canDelete}">
+               <span>{{message.message}}</span>
+               <button class="message-delete" *ngIf="message.canDelete" (click)="deleteMessage(message)">&times;</button>
+          </div>
+          <p *ngIf="message.showDate" class="message-date">{{message.date | date : 'short'}}</p>
+     </article>
+     <article class="message-group" *ngIf="typing">
+          <div class="message typing">
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+          </div>
+     </article>
+</section>
+
+<section class="create-message">
+     <form (submit)="sendMessage()">
+          <div class="create-submit">
+               <button type="submit">&uarr;</button>
+          </div>
+          <div class="create-input">
+               <input type="text" id="message" name="message" (keyup)="isTyping()" [(ngModel)]="message.message">
+          </div>
+          <hr style="margin:10px 0">
+
+          <div class="custom-select">
+               <select id="user" name="user" [(ngModel)]="message.userId">
+                    <option value="">- select user -</option>
+                    <option value="{{user.id}}" *ngFor="let user of users">{{user.username}}</option>
+               </select>
+               <div class="custom-select-arrow"></div>
+          </div>
+     </form>
+</section>

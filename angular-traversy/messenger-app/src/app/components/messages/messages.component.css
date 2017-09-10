@@ -1,0 +1,41 @@
+.messages{ margin-bottom:15px; }
+.messages:after{ content: ""; display: table; clear: both; }
+.messages .message-group { clear:both; float: left; }
+     .messages .message-group .message-user,
+     .messages .message-group .message-date { font-size:11px; margin:0; color:#999; padding:0 15px;}
+     .messages .message-group .message { position: relative; background:#CCC; color:#111; border-radius:20px; margin-top:2px; padding:10px 15px; max-width: 200px; line-height: 18px; display:inline-block; }
+     .messages .message-group .message .message-textarea {  }
+     .messages .message-group .message .message-delete { border:none; border-radius: 50%; background-color: #000; color: #fff; line-height: 0; width: 15px; height: 15px; padding: 0; position: absolute; top: -3px; right: -3px; }
+
+.messages .message-group.mine { float: right; text-align: right}
+     .messages .message-group.mine .message { background:#0A0; color:#fff; text-align: left; }
+
+.messages .message.typing { padding:12.5px 15px }
+
+.create-message { clear:both; padding:15px; background-color:#EEE; }
+.create-message .create-input { padding-right:35px }
+.create-message input{ display: block; width: 100%; box-sizing: border-box; padding:5px; border-radius: 20px; border:none; }
+.create-message input:focus{ outline: none }
+
+.create-message .create-submit { width:25px; float: right }
+.create-message .create-submit button { background:#0A0; color:#fff; border-radius:50%; border:none; padding:4px 6px }
+
+@keyframes pulse { from { opacity:.5 } to { opacity:1 } }
+
+.messages .message.typing .dot { position:relative; float:left; width:6px; height:6px; background-color:#666; border-radius:3px; margin-right:4px; animation-duration: 0.4s; animation-name: pulse; animation-iteration-count: infinite; animation-direction: alternate; }
+.messages .message.typing .dot:nth-child(1) {  }
+.messages .message.typing .dot:nth-child(2) { animation-delay: .2s; }
+.messages .message.typing .dot:nth-child(3) { animation-delay: .4s; margin-right:0 }
+
+
+.shake { display:block; position:relative; -webkit-animation-name: shake; -webkit-animation-duration: .5s; -webkit-transform-origin:50% 50%; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes shake {
+     0% { -webkit-transform: translate(0px,0px) rotate(0deg); }
+     20% { -webkit-transform: translate(-1px,-1px) rotate(-2deg); }
+     40% { -webkit-transform: translate(1px,1px) rotate(2deg); }
+     60% { -webkit-transform: translate(0px,0px) rotate(0deg); }
+     80% { -webkit-transform: translate(-1px,-1px) rotate(-2deg); }
+     100% { -webkit-transform: translate(1px,1px) rotate(2deg); }
+}
+
