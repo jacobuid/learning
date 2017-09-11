@@ -1,0 +1,58 @@
+{
+     "characters": [
+          {
+               "id": 1,
+               "name": "Goku",
+               "powerLevel": 8500,
+               "moves":[{
+                  "hit": 100,
+                  "kick": 150
+               }]
+          },
+          {
+               "id": 1,
+               "name": "Krillin",
+               "powerLevel": 1770,
+               "moves":[{
+                    "hit": 100,
+                    "kick": 150
+               }]
+          },
+          {
+               "id": 1,
+               "name": "Piccolo",
+               "powerLevel": 3500,
+               "moves":[{
+                    "hit": 100,
+                    "kick": 150
+               }]
+          },
+          {
+               "id": 1,
+               "name": "Yamcha",
+               "powerLevel": 1480,
+               "moves":[{
+                    "hit": 100,
+                    "kick": 150
+               }]
+          },
+          {
+               "id": 1,
+               "name": "Tien",
+               "powerLevel": 1830,
+               "moves":[{
+                    "hit": 100,
+                    "kick": 150
+               }]
+          },
+          {
+               "id": 1,
+               "name": "Vegeta",
+               "powerLevel": 18000,
+               "moves":[{
+                    "hit": 100,
+                    "kick": 150
+               }]
+          }
+     ]
+}
