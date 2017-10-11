@@ -1,0 +1,8 @@
+/* Notice this CSS doesnt leak out of component!!! */
+
+.red{
+     color:red;
+}
+
+.round{ border-radius: 20px }
+.block{ display: block; width: 100% }

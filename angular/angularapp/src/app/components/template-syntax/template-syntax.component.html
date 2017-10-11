@@ -1,0 +1,75 @@
+<h2 class="red">Template Syntax</h2>
+
+<hr>
+
+<h4>Binding</h4>
+
+<ul>
+     <li>{{names}}</li>
+</ul>
+<ul>
+     <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<ul>
+     <li *ngFor="let name of names; let i = index">
+          {{i+1}}: {{name}}
+     </li>
+</ul>
+
+<ul>
+     <li *ngFor="let fighter of fighters">
+          Name: {{fighter.name}} - Power Level: {{fighter.power}}
+     </li>
+</ul>
+
+<hr>
+
+<h4>Conditionals</h4>
+
+<h6>NG If Statement</h6>
+<p>
+     Hello
+     <span *ngIf="showHero">{{hero}}!!</span>
+     <span *ngIf="!showHero">World!!</span>
+</p>
+
+<h6>Ternary Operation</h6>
+<p>{{ showHero ? hero : 'World' }}!!</p>
+
+<h6>NG Switch Statement</h6>
+<p [ngSwitch]="winning">
+     <span *ngSwitchCase="1">Gohan</span>
+     <span *ngSwitchCase="2">Goku</span>
+     <span *ngSwitchCase="3">Vegeta</span>
+     <span *ngSwitchCase="4">Piccolo</span>
+</p>
+
+<p>
+     <img [src]="image" /><br>
+     <span [textContent]="image"></span>
+</p>
+
+<p>
+     <button [ngClass]="buttonClasses">Round</button>
+     <button (click)="changeButton()">change</button>
+</p>
+
+<h4>Pipes/Filters</h4>
+
+<p>My Birthday is: {{birthday}}</p>
+<p>My Birthday is: {{birthday | date}}</p>
+<p>My Birthday is: {{birthday | date:'MM/dd/yyyy'}}</p>
+<p>My Birthday is: {{birthday | date:'EE, MMM d, yyyy'}}</p>
+
+<p>The car cost: {{ cost }}</p>
+<p>The car cost: {{ cost | currency}}</p>
+<p>The car cost: {{ cost | currency:'USD':1 }}</p>
+
+<p>The car cost: {{ cost | currency:'GBP':1 }}</p>
+<p>The car cost: {{ cost | currency:'JPY':1 }}</p>
+
+<p>The interest rate is: {{ fee }}</p>
+<p>The interest rate is: {{ fee | percent}}</p>
+<p>The interest rate is: {{ fee | percent:'1.2-2'}}</p>
+<p>The interest rate is: {{ fee | percent:'2.4-4'}}</p>

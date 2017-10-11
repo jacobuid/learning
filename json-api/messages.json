@@ -29,12 +29,6 @@
       "id": 2
     },
     {
-      "userId": "1",
-      "message": "Do you want to see a movie tonight?",
-      "date": "2017-09-11T02:36:52.433Z",
-      "id": 3
-    },
-    {
       "userId": "0",
       "message": "Sure",
       "date": "2017-09-11T02:37:02.355Z",

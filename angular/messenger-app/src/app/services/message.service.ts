@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 export class MessageService {
 
      messageAPI: string = 'http://localhost:4201';
+     //messageAPI: string = 'https://api.myjson.com/bins/1divdp';
 
      constructor(public $http: Http) {}
 

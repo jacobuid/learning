@@ -1,0 +1,92 @@
+
+<button (click)="fireEvent($event)">Click</button>
+<br>
+<button (mouseover)="fireEvent($event)">MouseOver</button>
+<br>
+<button (mousedown)="fireEvent($event)">MouseDown</button>
+<br>
+<button (mouseup)="fireEvent($event)">MouseUp</button>
+<br>
+<button (dblclick)="fireEvent($event)">Double Click</button>
+<br>
+<button (drag)="fireEvent($event)">Drag</button>
+
+<br>
+<br>
+<button (click)="changeValue($event)">Change Value</button>
+<span *ngIf="value">{{text}}</span>
+
+<br>
+<br>
+<input type="text" (keyup)="inputEvent($event)" placeholder="keyup">
+<br>
+<input type="text" (keydown)="inputEvent($event)" placeholder="keydown">
+<br>
+<input type="text" (focus)="inputEvent($event)" placeholder="focus">
+<br>
+<input type="text" (blur)="inputEvent($event)" placeholder="blur">
+<br>
+<input type="text" (cut)="inputEvent($event)" placeholder="cut">
+<br>
+<input type="text" (copy)="inputEvent($event)" placeholder="copy">
+<br>
+<input type="text" (paste)="inputEvent($event)" placeholder="paste">
+<br>
+<input type="text" (select)="inputEvent($event)" placeholder="select">
+
+<br>
+<br>
+<h4>Fake Binding</h4>
+One way: <input type="text" (keyup)="changeText($event)" placeholder="change text">
+{{text}}
+<br>
+Two way: <input type="text" (keyup)="changeText($event)" placeholder="change text" value="{{text}}">
+{{text}}
+
+<h4>Binding: A better way</h4>
+<form>
+     <div class="form-group">
+          <label>Name: {{name}}</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="name">
+     </div>
+     <div class="form-group">
+          <label>Age: {{age}}</label>
+          <input type="number" class="form-control" name="age" [(ngModel)]="age">
+     </div>
+     <input type="submit" value="Submit" class="btn btn-success">
+</form>
+
+
+<h4>Submiting Forms</h4>
+<form (submit)="fireSubmit()">
+     <div class="form-group">
+          <label>Name: {{name}}</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="name">
+     </div>
+     <input type="submit" value="Submit" class="btn btn-success">
+</form>
+<ul class="list-group">
+     <li class="list-group-item" *ngFor="let name of fighters">{{name}}</li>
+</ul>
+
+
+<h4>Validating Forms</h4>
+<form novalidate #f="ngForm" (ngSubmit)="fireValidation(f)">
+     <div class="form-group">
+          <label>Name: {{fighter.name}}</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="fighter.name" #fighterName="ngModel" minlength="2" required>
+          <div class="text-danger" *ngIf="fighterName.errors?.required && fighterName.touched">Name is Required</div>
+          <div class="text-danger" *ngIf="fighterName.errors?.minlength && fighterName.touched">Name should be at least 2 characters</div>
+     </div>
+     <div class="form-group">
+          <label>Race: {{fighter.race}}</label>
+          <input type="text" class="form-control" name="race" [(ngModel)]="fighter.race" #fighterRace="ngModel" required>
+          <div class="text-danger" *ngIf="fighterRace.errors?.required && fighterRace.touched">Race is Required</div>
+     </div>
+     <div class="form-group">
+          <label>Power Level: {{fighter.powerlevel}}</label>
+          <input type="number" class="form-control" name="power" [(ngModel)]="fighter.powerlevel" #fighterPower="ngModel" min="100">
+          <div class="text-danger" *ngIf="fighterPower.errors?.min && fighterPower.touched">Power Level should be greater than 100</div>
+     </div>
+     <input type="submit" value="Submit" class="btn btn-success">
+</form>
