@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "jacobuid",
+      "email": "jacobuid@gmail.com",
+      "firstName": "Jacob",
+      "lastName": "King"
+    },
+    {
+      "id": 1,
+      "username": "kortnicct",
+      "email": "kortnicct@gmail.com",
+      "firstName": "Kortni",
+      "lastName": "King"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": null,
+      "name": "Build Login Page",
+      "description": "As a user, I need a Login Page so that I can access the app.",
+      "type": "backlog",
+      "parent": null
+    },
+    {
+      "id": 2,
+      "userId": null,
+      "name": "Build Dashboard Page",
+      "description": "As a user, I need a Dashboard Page so that I can get an overview of the app.",
+      "type": "backlog",
+      "parent": null
+    },
+    {
+      "id": 3,
+      "userId": null,
+      "name": "Build User Settings Page",
+      "description": "As a user, I need a User Setting Page so that I can modify my information on the app.",
+      "type": "backlog",
+      "parent": null
+    },
+    {
+      "id": 4,
+      "userId": null,
+      "name": "Design Login Page",
+      "description": "Design the user login page using photoshop and make it pretty!!",
+      "type": "subtask",
+      "parent": "1"
+    },
+    {
+      "id": 2,
+      "userId": null,
+      "name": "Build Users API",
+      "description": "Create an endpoint for the UI developer to call to submit user logins for validation",
+      "type": "subtask",
+      "parent": "1"
+    },
+    {
+      "id": 3,
+      "userId": null,
+      "name": "Develop Login Page",
+      "description": "Build the Login Page based on the designs",
+      "type": "subtask",
+      "parent": "1"
+    },
+    {
+      "id": 4,
+      "userId": null,
+      "name": "QA Login Page",
+      "description": "Test the Login Page for correct behavior based on Backlog requirements.",
+      "type": "subtask",
+      "parent": "1"
+    }
+  ]
+}
