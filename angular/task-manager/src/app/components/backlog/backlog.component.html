@@ -1,3 +1,7 @@
-<p>
-  backlog works!
-</p>
+<h2>Backlog Items!</h2>
+<section>
+  <article *ngFor="let backlog of backlogs">
+    <h3>{{ backlog.name }}</h3>
+    <p>{{ backlog.description }}</p>
+  </article>
+</section>

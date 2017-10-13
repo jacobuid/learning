@@ -18,7 +18,9 @@ import { TasksService } from './services/tasks.service';
   providers: [
     TasksService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule { }

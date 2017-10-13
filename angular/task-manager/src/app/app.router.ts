@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { TaskComponent } from './components/task/task.component';
 import { BacklogComponent } from './components/backlog/backlog.component';
@@ -21,8 +22,12 @@ const routes: Routes = [
             { enableTracing: true }
         )
     ],
+    providers:[
+        HttpModule
+    ],
     exports: [
-        RouterModule
+        RouterModule,
+        HttpModule
     ]
 })
 
