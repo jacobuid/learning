@@ -11,18 +11,17 @@ const routes: Routes = [
     { path: 'task', component: TaskComponent },
     { path: 'backlog', component: BacklogComponent },
     { path: 'sprint', component: SprintComponent },
-    { path: '',   redirectTo: '/backlog', pathMatch: 'full' },
+    { path: '', redirectTo: '/backlog', pathMatch: 'full' },
     { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
-    imports:[ 
+    imports: [
         RouterModule.forRoot(
-            routes,
-            { enableTracing: true }
+            routes
         )
     ],
-    providers:[
+    providers: [
         HttpModule
     ],
     exports: [
@@ -31,11 +30,11 @@ const routes: Routes = [
     ]
 })
 
-export class AppRouterModule {}
+export class AppRouterModule { }
 
-export const RouterComponents = [ 
-    TaskComponent, 
-    BacklogComponent, 
-    SprintComponent, 
-    NotFoundComponent 
+export const RouterComponents = [
+    TaskComponent,
+    BacklogComponent,
+    SprintComponent,
+    NotFoundComponent
 ]
