@@ -1,0 +1,19 @@
+.search-bar{
+    margin-top: 10px
+}
+
+.video-detail .details {
+    margin-top:10px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius: 4px;
+}
+
+.video-list-item img {
+    max-width: 64px;
+}
+
+.video-list-item:hover {
+    background-color:#eee;
+    cursor: pointer
+}
